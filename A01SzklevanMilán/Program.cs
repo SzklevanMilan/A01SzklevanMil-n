@@ -22,7 +22,7 @@ namespace A01SzklevanMilán
             //}
             for (int i = 0; i < adatok.Length; i++)
             {
-                adatok[i] = int.Parse(atmeneti[i]);
+                adatok[i]  = 2 * int.Parse(atmeneti[i]);
                 Console.WriteLine(adatok[i]);
             }
             sr.Close();
