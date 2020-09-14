@@ -41,10 +41,23 @@ namespace A01SzklevanMilán
             }
             Console.WriteLine("A maximum: {0}",max);
         }
+        static void Egyediek()
+        {
+            int db = 0;
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                if (adatok[i] % 5 == 0 && adatok[i] % 7 == 0)
+                {
+                    db++;
+                }
+            }
+            Console.WriteLine("5 és 7 oszthatóak száma: {0}", db);
+        }
         static void Main(string[] args)
         {
            Beolvasas();
            Maximumertek();
+            Egyediek();
             Console.ReadKey();
         }
     }
