@@ -20,7 +20,6 @@ namespace A01SzklevanMilán
             //    adatok[i] = int.Parse(atmeneti[i]);
             //    Console.WriteLine(adatok);
             //}
-            int s = 0;
             for (int i = 0; i < adatok.Length; i++)
             {
                 adatok[i] = int.Parse(atmeneti[i]);
@@ -52,6 +51,13 @@ namespace A01SzklevanMilán
                 }
             }
             Console.WriteLine("5 és 7 oszthatóak száma: {0}", db);
+
+            StreamWriter sw = new StreamWriter("Egyediek.txt");
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                sw.WriteLine(" ");
+            }
+            sw.Close();
         }
         static void Main(string[] args)
         {
