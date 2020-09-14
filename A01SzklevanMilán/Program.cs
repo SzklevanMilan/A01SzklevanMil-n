@@ -9,13 +9,43 @@ namespace A01SzklevanMilán
 {
     class Program
     {
+        static int[] adatok = new int[1000];
         static void Beolvasas()
         {
             StreamReader sr = new StreamReader("adatok.dat");
+            string[] atmeneti = sr.ReadLine().Split();
+            //int i = 0;
+            //while (!sr.EndOfStream)
+            //{
+            //    adatok[i] = int.Parse(atmeneti[i]);
+            //    Console.WriteLine(adatok);
+            //}
+            int s = 0;
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                adatok[i] = int.Parse(atmeneti[i]);
+                Console.WriteLine(adatok[i]);
+            }
+            sr.Close();
+        }
+
+        static void Maximumertek()
+        {
+            int max = adatok[0];
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                if (adatok[i] > max)
+                {
+                    max = adatok[i];
+                }
+            }
+            Console.WriteLine("A maximum: {0}",max);
         }
         static void Main(string[] args)
         {
-            Beolvasas();
+           Beolvasas();
+           Maximumertek();
+            Console.ReadKey();
         }
     }
 }
